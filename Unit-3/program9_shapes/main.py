@@ -1,8 +1,20 @@
-def circle(radius):
-    return 3.14 * radius * radius
+import shapes
 
-def rectangle(length, width):
-    return length * width
+choice = input("Enter shape name: ")
 
-def triangle(length, width):
-    return 0.5 * length * width
+if choice == "circle":
+    r = float(input("Enter radius: "))
+    print("Area:", shapes.circle(r))
+
+elif choice == "rectangle":
+    l = float(input("Enter length: "))
+    w = float(input("Enter width: "))
+    print("Area:", shapes.rectangle(l, w))
+
+elif choice == "triangle":
+    l = float(input("Enter length: "))
+    w = float(input("Enter width: "))
+    print("Area:", shapes.triangle(l, w))
+
+else:
+    print("Invalid shape")
